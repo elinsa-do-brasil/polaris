@@ -23,7 +23,7 @@ export default async function Layout({
     <html lang={lang} className={inter.className} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
         <RootProvider i18n={i18nProvider(translations, lang)}>
-          <DocsLayout tree={source.getPageTree()} {...baseOptions(lang)}>
+          <DocsLayout tree={source.getPageTree(lang)} {...baseOptions(lang)}>
             {children}
           </DocsLayout>
         </RootProvider>

@@ -1,5 +1,11 @@
 import { notFound } from "next/navigation";
-import { getLLMText, getPageMarkdownUrl, source } from "@/lib/source";
+import { markdownResponse } from "@/lib/markdown-response";
+import {
+  getLLMText,
+  getPageMarkdownUrl,
+  parseLocalizedPageSlug,
+  source,
+} from "@/lib/source";
 
 export const revalidate = false;
 
@@ -8,19 +14,15 @@ export async function GET(
   { params }: RouteContext<"/llms.mdx/docs/[[...slug]]">,
 ) {
   const { slug } = await params;
-  const page = source.getPage(slug?.slice(0, -1));
+  const pageSlug = parseLocalizedPageSlug(slug?.slice(0, -1));
+  const page = source.getPage(pageSlug.slugs, pageSlug.locale);
   if (!page) notFound();
 
-  return new Response(await getLLMText(page), {
-    headers: {
-      "Content-Type": "text/markdown",
-    },
-  });
+  return markdownResponse(await getLLMText(page));
 }
 
 export function generateStaticParams() {
   return source.getPages().map((page) => ({
-    lang: page.locale,
     slug: getPageMarkdownUrl(page).segments,
   }));
 }

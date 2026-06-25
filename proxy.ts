@@ -19,19 +19,8 @@ const { rewrite: rewriteSuffix } = rewritePath(
   `${docsContentRoute}{/*path}/content.md`,
 );
 
-function removeLocalePrefix(pathname: string) {
-  const [, locale, ...segments] = pathname.split("/");
-  const languages: readonly string[] = i18n.languages;
-
-  if (locale && languages.includes(locale)) {
-    return `/${segments.join("/")}`;
-  }
-
-  return pathname;
-}
-
 export default function proxy(request: NextRequest, event: NextFetchEvent) {
-  const pathname = removeLocalePrefix(request.nextUrl.pathname);
+  const pathname = request.nextUrl.pathname;
   const result = rewriteSuffix(pathname);
   if (result) {
     return NextResponse.rewrite(new URL(result, request.nextUrl));
@@ -49,5 +38,7 @@ export default function proxy(request: NextRequest, event: NextFetchEvent) {
 }
 
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico|e.svg).*)"],
+  matcher: [
+    "/((?!api|_next/static|_next/image|favicon.ico|e.svg|og|llms.txt|llms-full.txt|llms.mdx).*)",
+  ],
 };

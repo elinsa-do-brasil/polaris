@@ -12,8 +12,26 @@ export const source = loader({
   plugins: [lucideIconsPlugin()],
 });
 
+export function parseLocalizedPageSlug(segments: string[] = []) {
+  const [locale, ...slugs] = segments;
+  const languages: readonly string[] = i18n.languages;
+
+  if (locale && languages.includes(locale)) {
+    return {
+      locale,
+      slugs,
+    };
+  }
+
+  return {
+    locale: i18n.defaultLanguage,
+    slugs: segments,
+  };
+}
+
 export function getPageImage(page: (typeof source)["$inferPage"]) {
-  const segments = [...page.slugs, "image.png"];
+  const locale = page.locale ?? i18n.defaultLanguage;
+  const segments = [locale, ...page.slugs, "image.png"];
 
   return {
     segments,
@@ -22,7 +40,8 @@ export function getPageImage(page: (typeof source)["$inferPage"]) {
 }
 
 export function getPageMarkdownUrl(page: (typeof source)["$inferPage"]) {
-  const segments = [...page.slugs, "content.md"];
+  const locale = page.locale ?? i18n.defaultLanguage;
+  const segments = [locale, ...page.slugs, "content.md"];
 
   return {
     segments,
