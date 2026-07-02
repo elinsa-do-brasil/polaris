@@ -1,0 +1,483 @@
+---
+title: Política de segurança de contas
+description: Regras para proteger contas corporativas, senhas e acessos usados no trabalho.
+---
+
+Esta política define as regras para proteger contas corporativas, e-mails, sistemas internos e acessos usados no trabalho.
+
+Ela existe para reduzir o risco de acesso indevido, roubo de senha, phishing[^phishing], perda de dados e uso indevido de contas da Elinsa. A conta corporativa[^conta-corporativa] é uma porta de entrada para informações da empresa. Por isso, ela precisa ser protegida com mais de uma camada.
+
+## Regras principais
+
+Todo colaborador deve seguir estas regras:
+
+- usar senha longa, com pelo menos 16 caracteres;
+- usar uma senha diferente para cada serviço;
+- usar um gerenciador de senhas[^gerenciador] recomendado pela TI;
+- ativar a verificação em duas etapas;
+- usar aplicativo autenticador sempre que o sistema permitir;
+- evitar SMS[^sms] como método de segurança;
+- não compartilhar senha, código, QR Code ou código de recuperação;
+- avisar a TI ao perceber login suspeito, perda de celular ou tentativa de golpe.
+
+## A quem esta política se aplica
+
+Esta política se aplica a todas as pessoas que usam contas ou acessos da Elinsa:
+
+- colaboradores;
+- gestores;
+- prestadores de serviço;
+- usuários com contas administrativas;
+- usuários de contas compartilhadas, quando existirem;
+- responsáveis por contas de serviço;
+- terceiros com acesso a sistemas, arquivos ou informações da empresa.
+
+As regras valem para e-mail corporativo, Microsoft 365, VPN[^vpn], sistemas internos, plataformas web, painéis administrativos e qualquer outro serviço usado para trabalho.
+
+## Por que senha sozinha não é suficiente
+
+Senha pode vazar, ser repetida, ser descoberta em golpe de phishing ou ficar salva em lugar inadequado. Por isso, a segurança da conta não deve depender apenas da senha.
+
+A proteção adequada combina várias camadas:
+
+1. senha longa;
+2. senha única;
+3. gerenciador de senhas;
+4. verificação em duas etapas;
+5. atenção a tentativas de golpe.
+
+Pense nisso como uma porta importante: a senha é a chave, mas a verificação em duas etapas funciona como um segundo cadeado. Se uma proteção falhar, a outra ainda ajuda a impedir o acesso.
+
+## Senhas
+
+Toda conta corporativa deve usar senha com pelo menos 16 caracteres.
+
+A senha deve ser única, ou seja, não pode ser a mesma senha usada em conta pessoal, rede social, banco, loja, sistema antigo ou qualquer outro serviço.
+
+### O que evitar
+
+Não use informações fáceis de descobrir, como:
+
+- nome da empresa;
+- seu nome;
+- matrícula;
+- setor;
+- data de nascimento;
+- telefone;
+- placa de veículo;
+- nome de familiares;
+- nome de animal de estimação;
+- palavras como `senha`, `admin`, `empresa` ou `elinsa`;
+- sequências como `123456`, `qwerty`, `abcd` ou `000000`.
+
+Também não use variações previsíveis, como trocar `a` por `@` ou acrescentar o ano no fim da senha. Esse tipo de padrão é comum e fácil de testar.
+
+### Exemplos de senhas fracas
+
+```txt
+Elinsa@123
+Senha2026!
+Empresa@2026
+Admin@123456
+```
+
+Essas senhas parecem completas, mas seguem padrões muito conhecidos.
+
+### Exemplos de senhas melhores
+
+```txt
+janela-cafe-rio-pedra-livro-82
+```
+
+```txt
+trabalho-limpo-mesa-azul-caminho-47
+```
+
+```txt
+v9!Lx2#pQ7@rM4zK
+```
+
+Uma frase longa com palavras aleatórias pode ser mais fácil de lembrar do que uma senha curta cheia de símbolos. O importante é que a senha seja longa, exclusiva e sem relação óbvia com você.
+
+## Senha única para cada serviço
+
+Cada serviço deve ter sua própria senha.
+
+Se a mesma senha for usada em vários lugares, um vazamento fora da empresa pode colocar a conta corporativa em risco. É como usar a mesma chave para abrir sua casa, seu carro e a porta do escritório: se alguém copia essa chave, tudo fica exposto.
+
+Use senhas diferentes para e-mail corporativo, sistemas internos, ferramentas externas e contas pessoais. Se uma senha vazar, as outras continuam protegidas.
+
+## Gerenciador de senhas
+
+A Elinsa recomenda o uso de um gerenciador de senhas dedicado.
+
+As opções recomendadas pela TI são:
+
+- [Proton Pass](https://proton.me/pt-br/pass)
+- [Bitwarden](https://bitwarden.com/pt-br/)
+
+Essas opções foram escolhidas porque atendem bem ao uso diário:
+
+- têm plano gratuito;
+- não impõem limite de senhas salvas;
+- funcionam em computadores, celulares e extensões de navegador;
+- suportam passkeys[^passkey] nas principais plataformas usadas pela empresa.
+
+O gerenciador de senhas ajuda a:
+
+- criar senhas longas e aleatórias;
+- guardar senhas em um cofre criptografado;
+- evitar reutilização de senha;
+- preencher login com mais segurança;
+- organizar acessos por pessoa, equipe ou serviço;
+- compartilhar acesso de forma controlada, quando isso for necessário.
+
+Na prática, ele funciona como um cofre de chaves. O colaborador precisa proteger bem a senha principal do cofre e não compartilhá-la com outras pessoas.
+
+<Callout title="Tutoriais e leituras úteis sobre gerenciadores">
+  Estes materiais ajudam na configuração inicial e no uso do gerenciador:
+
+  - [Como baixar e usar o Proton Pass](https://proton.me/pt/pass/download)
+  - [Como começar com a extensão do Bitwarden no navegador](https://bitwarden.com/pt-br/help/getting-started-browserext/)
+  - [Boas práticas de gerenciamento de senhas corporativas, pela Proton](https://proton.me/pt-br/business/pass/password-management-best-practices)
+  - [Boas práticas de gerenciamento de senhas, pelo Bitwarden](https://bitwarden.com/pt-br/blog/five-best-practices-for-password-management/)
+</Callout>
+
+### Passkeys
+
+Passkey é uma forma mais moderna de entrar em contas sem depender apenas de senha. Quando o sistema permite, a passkey pode usar o bloqueio do próprio aparelho, como biometria, PIN ou chave de segurança.
+
+Sempre que uma plataforma corporativa permitir o uso de passkey, a TI poderá orientar o cadastro.
+
+<Callout title="Para entender passkeys">
+  Passkeys ainda são novas para muita gente. Estes materiais explicam melhor o
+  conceito e mostram como elas funcionam em gerenciadores de senhas:
+
+  - [O que são passkeys, pelo Bitwarden](https://bitwarden.com/pt-br/blog/what-are-passkeys-and-passkey-login/)
+  - [Como entrar no Bitwarden usando passkey](https://bitwarden.com/pt-br/blog/log-into-bitwarden-with-a-passkey/)
+  - [Como usar passkeys no Proton Pass](https://proton.me/support/pass-use-passkeys)
+</Callout>
+
+### Navegador não é cofre corporativo
+
+Salvar senha no navegador pode parecer prático, mas o navegador não deve ser usado como cofre principal de senhas da empresa.
+
+Isso vale para:
+
+- Microsoft Edge;
+- Google Chrome;
+- Firefox;
+- outros navegadores com salvamento automático de senha.
+
+O navegador é feito para acessar sites. O gerenciador de senhas é feito para guardar credenciais com mais controle.
+
+<Callout type="warn" title="Atenção especial ao Microsoft Edge">
+  O Microsoft Edge já vem instalado no Windows e costuma ser usado como
+  navegador padrão em computadores da empresa. Por isso, é comum que ele
+  ofereça para salvar senhas durante o login em e-mail, sistemas internos e
+  outros serviços de trabalho.
+
+  Evite usar o Edge para salvar senhas corporativas. Se o computador for
+  comprometido, as senhas salvas no navegador podem ficar mais expostas do que
+  estariam em um gerenciador de senhas dedicado.
+
+  Casos recentes envolvendo o Microsoft Edge reforçam esse cuidado:
+
+  - [Microsoft Edge mantém todas as senhas salvas não criptografadas](https://proton.me/pt-br/business/blog/microsoft-edge-passwords-exposed)
+  - [Falha no Edge expõe senhas em texto simples na memória; Microsoft diz que é design](https://www.tecmundo.com.br/seguranca/412910-falha-no-edge-expoe-senhas-em-texto-simples-na-memoria.htm)
+</Callout>
+
+## Verificação em duas etapas
+
+Toda conta corporativa deve usar verificação em duas etapas quando o serviço oferecer esse recurso.
+
+Isso significa que, além da senha, a conta pede uma segunda confirmação. Essa confirmação pode ser um código temporário, uma passkey ou uma chave de segurança.
+
+É parecido com entrar em um prédio: saber o número da sala não basta; você também precisa passar pela portaria.
+
+### Método padrão: aplicativo autenticador
+
+O método padrão da Elinsa é o código temporário por aplicativo autenticador, também chamado de TOTP[^totp].
+
+Aplicativos recomendados pela TI:
+
+- 2FAS ([Android](https://play.google.com/store/apps/details?id=com.twofasapp) e [iOS](https://apps.apple.com/br/app/2fa-authenticator-2fas/id1217793794));
+- Proton Authenticator ([Android](https://play.google.com/store/apps/details?id=proton.android.authenticator) e [iOS](https://apps.apple.com/br/app/proton-authenticator/id6741758667));
+- Bitwarden Authenticator ([Android](https://play.google.com/store/apps/details?id=com.bitwarden.authenticator) e [iOS](https://apps.apple.com/br/app/bitwarden-authenticator/id6497335175));
+- Ente Auth ([Android](https://play.google.com/store/apps/details?id=io.ente.auth) e [iOS](https://apps.apple.com/br/app/ente-auth-2fa-authenticator/id6444121398)).
+
+TOTP é o código de 6 dígitos que muda a cada poucos segundos. Ele não chega por SMS. Ele é gerado no aplicativo autenticador.
+
+<Callout title="Tutoriais para configurar a segunda etapa">
+  Use estes materiais quando precisar configurar uma conta ou entender o fluxo
+  de verificação:
+
+  - [Configurar MFA no Microsoft 365 com conta corporativa ou escolar](https://support.microsoft.com/pt-br/office/account-management/set-up-your-microsoft-365-sign-in-for-multi-factor-authentication)
+  - [Como adicionar contas ao Microsoft Authenticator](https://support.microsoft.com/pt-br/authenticator/how-to-add-your-accounts-to-microsoft-authenticator)
+  - [Ativar a verificação em duas etapas na Conta Google](https://support.google.com/accounts/answer/185839?co=GENIE.Platform%3DAndroid&hl=pt-BR)
+</Callout>
+
+### Por que a Elinsa prefere aplicativo autenticador
+
+O aplicativo autenticador é mais seguro do que SMS porque não depende da operadora de celular. Em golpes de troca de chip, alguém tenta transferir o número da vítima para outro chip e receber códigos por mensagem.
+
+O TOTP também é um padrão aberto. Isso permite usar diferentes aplicativos compatíveis, sem prender a empresa a uma única plataforma.
+
+## Métodos permitidos
+
+| Método | Uso na política |
+| --- | --- |
+| Aplicativo autenticador TOTP | Método padrão para a maioria das contas |
+| Gerenciador de senhas com TOTP integrado | Permitido quando aprovado pela TI |
+| Código de recuperação[^codigo-recuperacao] | Uso emergencial |
+| Passkey | Recomendado quando o sistema permitir |
+| Chave de segurança FIDO2[^fido2] | Recomendado para contas sensíveis |
+
+Para contas mais críticas, como TI, financeiro, RH, diretoria e contas administrativas, a proteção deve ser mais forte sempre que possível:
+
+```txt
+senha forte + gerenciador de senhas + aplicativo autenticador + passkey ou chave de segurança
+```
+
+## Métodos que não devem ser usados como padrão
+
+| Método | Regra | Motivo |
+| --- | --- | --- |
+| Código por SMS | Não usar como método regular | O número pode ser perdido, clonado ou transferido por golpe |
+| Código por ligação | Não usar como método regular | Tem riscos parecidos com SMS |
+| Código enviado ao próprio e-mail | Não usar para proteger o e-mail | Se o e-mail foi invadido, o código vai para o invasor |
+| Aprovação push sem número ou código | Evitar | A pessoa pode aprovar por cansaço ou engano |
+| Senha salva apenas no navegador | Evitar | Dá menos controle para acessos corporativos |
+
+SMS é melhor do que não ter segundo fator nenhum, mas não deve ser a opção padrão para contas corporativas quando houver alternativa melhor.
+
+## Como o colaborador deve usar o autenticador
+
+O colaborador deve proteger o celular e o aplicativo autenticador com senha, PIN, biometria ou bloqueio de tela.
+
+Não é permitido:
+
+- enviar print do QR Code[^qr-code] de autenticação;
+- enviar código TOTP por WhatsApp, e-mail ou chat;
+- salvar chave secreta em bloco de notas;
+- cadastrar autenticação em aparelho de outra pessoa;
+- aprovar login que você não reconhece;
+- deixar códigos de recuperação em local público.
+
+O QR Code do autenticador deve ser tratado como senha. Quem tem esse QR Code pode gerar os mesmos códigos temporários.
+
+## Códigos de recuperação
+
+Códigos de recuperação são chaves reserva para recuperar uma conta quando o colaborador perde acesso ao celular, troca de aparelho ou fica sem o autenticador.
+
+Esses códigos devem ser guardados em local seguro, como:
+
+- gerenciador de senhas;
+- local físico seguro, se a TI permitir;
+- outro meio aprovado pela TI.
+
+Não guarde códigos de recuperação em:
+
+- conversa de WhatsApp;
+- e-mail pessoal;
+- bloco de notas comum;
+- print solto na galeria do celular;
+- papel deixado sobre a mesa.
+
+Pense nesses códigos como a chave reserva da sua casa. Ela deve existir, mas precisa ficar guardada em lugar seguro.
+
+## Recuperação de acesso
+
+Se o colaborador perder acesso à conta, a recuperação deve seguir um caminho seguro.
+
+Podem ser usados:
+
+- código de recuperação;
+- segundo dispositivo autenticador aprovado;
+- validação presencial;
+- validação por canal interno definido pela TI;
+- redefinição feita pela TI após confirmação de identidade.
+
+Não serão aceitos como recuperação segura:
+
+- pedido informal por WhatsApp sem validação;
+- recuperação por SMS, salvo exceção aprovada;
+- recuperação baseada apenas em e-mail pessoal;
+- pedido feito por outra pessoa sem autorização.
+
+Se você perdeu o celular, trocou de aparelho ou recebeu uma tentativa de login que não reconhece, avise a TI.
+
+## Contas administrativas
+
+Contas administrativas[^conta-admin] têm mais permissões e, por isso, seguem regras mais rígidas.
+
+Uma conta administrativa pode alterar configurações, acessar dados, criar usuários, remover permissões ou afetar sistemas inteiros. Ela não deve ser usada para tarefas comuns.
+
+Regras mínimas:
+
+- senha com pelo menos 16 caracteres;
+- uso obrigatório de gerenciador de senhas;
+- verificação em duas etapas obrigatória;
+- SMS proibido como método regular;
+- senha salva apenas no navegador proibida;
+- conta nominal por administrador;
+- uso apenas para tarefas administrativas;
+- revisão periódica de acessos.
+
+A conta administrativa não deve ser usada para e-mail comum, navegação, Teams, compras, testes ou atividades do dia a dia.
+
+## Contas compartilhadas
+
+Contas compartilhadas[^conta-compartilhada] devem ser evitadas. Sempre que possível, cada pessoa deve usar sua própria conta.
+
+Quando uma conta compartilhada for inevitável, ela precisa ter:
+
+- justificativa;
+- responsável definido;
+- senha guardada em gerenciador aprovado;
+- acesso mínimo necessário;
+- lista de pessoas autorizadas;
+- revisão periódica;
+- plano para substituição por conta nominal, quando possível.
+
+Quem usa uma conta compartilhada deve seguir as mesmas regras de senha, gerenciador e verificação em duas etapas.
+
+## Contas de serviço
+
+Contas de serviço[^conta-servico] são usadas por sistemas, integrações e automações. Elas não devem ser usadas por pessoas para trabalhar no dia a dia.
+
+Sempre que possível, devem ser usadas alternativas próprias para sistemas, como:
+
+- token de aplicação[^token-aplicacao];
+- chave de API[^chave-api];
+- identidade gerenciada[^identidade-gerenciada];
+- certificado[^certificado];
+- integração própria do sistema.
+
+Quando uma conta de serviço for necessária, ela deve ter:
+
+- senha longa e aleatória;
+- acesso mínimo necessário;
+- responsável técnico;
+- documentação;
+- revisão periódica;
+- troca de credencial em caso de suspeita ou troca de responsável.
+
+## Quando trocar a senha
+
+A senha deve ser trocada quando houver:
+
+- suspeita de vazamento;
+- login suspeito;
+- phishing;
+- perda de dispositivo;
+- desligamento de pessoa com acesso;
+- troca de responsável por conta compartilhada;
+- solicitação da TI;
+- incidente de segurança.
+
+A troca periódica sem motivo claro não é recomendada, porque costuma levar a senhas previsíveis, como `SenhaJaneiro2026!`, `SenhaFevereiro2026!` e variações parecidas.
+
+## Responsabilidades do colaborador
+
+Cada colaborador deve:
+
+- proteger sua conta;
+- não compartilhar senha;
+- não compartilhar código do autenticador;
+- não aprovar login desconhecido;
+- usar senha única;
+- manter o autenticador protegido;
+- guardar códigos de recuperação em local seguro;
+- avisar a TI se perder ou trocar de celular;
+- avisar a TI ao perceber login estranho;
+- usar gerenciador de senhas recomendado sempre que possível.
+
+## Quando procurar a TI
+
+Procure a TI quando:
+
+- não souber qual gerenciador ou autenticador usar;
+- precisar configurar verificação em duas etapas;
+- perder o celular ou trocar de aparelho;
+- receber código de login sem ter tentado entrar;
+- desconfiar que sua senha vazou;
+- precisar de acesso a uma conta compartilhada;
+- precisar de exceção por motivo técnico.
+
+## Exceções
+
+Exceções só podem existir por motivo técnico real e precisam ser aprovadas pela TI ou pela gestão responsável.
+
+Toda exceção deve ter:
+
+- responsável;
+- justificativa;
+- prazo;
+- risco conhecido;
+- medida para reduzir o risco.
+
+Exceção permanente para conta sem segundo fator não deve ser aceita.
+
+## Exemplos do dia a dia
+
+### Recebi um código de login sem tentar entrar. O que faço?
+
+Não aprove e não informe o código a ninguém. Avise a TI.
+
+### Troquei de celular. O que faço?
+
+Avise a TI antes de apagar o aparelho antigo, sempre que possível. O autenticador precisa ser transferido ou cadastrado novamente com segurança.
+
+### Um colega pediu minha senha para resolver algo rápido. Posso passar?
+
+Não. Se alguém precisa acessar um sistema, deve usar a própria conta ou pedir autorização formal. Senha é pessoal.
+
+### Posso deixar o código de recuperação em uma conversa comigo mesmo?
+
+Não. Conversas, prints e bloco de notas comum são fáceis de perder, sincronizar ou expor. Use o gerenciador de senhas ou outro local seguro aprovado.
+
+### O app autenticador é a mesma coisa que SMS?
+
+Não. O SMS chega pela operadora de celular. O app autenticador gera o código no próprio aparelho, sem depender de mensagem de texto.
+
+## Checklist para o colaborador
+
+Use esta lista para conferir se sua conta está seguindo a política:
+
+- Minha senha tem pelo menos 16 caracteres.
+- Esta senha não é usada em nenhum outro lugar.
+- A senha não contém meu nome, empresa, data ou sequência fácil.
+- Uso gerenciador de senhas recomendado pela TI.
+- A verificação em duas etapas está ativada.
+- Uso aplicativo autenticador, passkey ou chave de segurança quando disponível.
+- Tenho códigos de recuperação guardados com segurança.
+- Meu celular tem bloqueio de tela.
+- Não salvo senhas corporativas apenas no navegador.
+- Sei como avisar a TI se perceber algo estranho.
+
+[^phishing]: Golpe em que alguém tenta enganar a pessoa para revelar senha, código ou dados. Pode chegar por e-mail, WhatsApp, SMS, ligação ou página falsa.
+[^conta-corporativa]: Conta usada para trabalho, como e-mail da empresa, Microsoft 365, sistemas internos, VPN ou ferramentas contratadas pela Elinsa.
+[^gerenciador]: Aplicativo que guarda senhas em um cofre protegido. Ele ajuda a criar senhas fortes e diferentes para cada serviço, sem precisar decorar todas.
+[^sms]: Mensagem de texto enviada pela operadora do celular. Não é o método ideal para proteger contas porque o número pode ser perdido, clonado ou transferido por golpe.
+[^vpn]: Acesso seguro usado para entrar em sistemas internos fora da rede da empresa. É como um caminho reservado entre o computador e a rede corporativa.
+[^passkey]: Forma de login que usa o aparelho, biometria, PIN ou chave de segurança para confirmar a identidade, sem depender apenas de senha.
+[^totp]: Código temporário gerado por aplicativo autenticador. Normalmente tem 6 dígitos e muda a cada poucos segundos.
+[^codigo-recuperacao]: Código reserva usado para recuperar a conta se o celular, autenticador ou segundo fator não estiver disponível.
+[^fido2]: Padrão de autenticação usado por chaves físicas de segurança e algumas passkeys. Ajuda a proteger contra phishing porque confirma o site correto antes do login.
+[^qr-code]: Código visual em forma de quadrado que pode carregar uma chave secreta de autenticação. No caso do autenticador, deve ser protegido como senha.
+[^conta-admin]: Conta com permissões elevadas para configurar sistemas, criar usuários, alterar acessos ou realizar tarefas sensíveis.
+[^conta-compartilhada]: Conta usada por mais de uma pessoa. Deve ser evitada porque dificulta saber quem acessou ou alterou algo.
+[^conta-servico]: Conta usada por sistemas, integrações ou automações. Não deve ser usada por pessoas como conta comum de trabalho.
+[^token-aplicacao]: Código ou credencial usada por um sistema para se autenticar em outro sistema, sem depender de uma pessoa digitando senha.
+[^chave-api]: Chave usada para permitir que sistemas conversem entre si por uma API. Deve ser tratada como senha.
+[^identidade-gerenciada]: Identidade criada para um sistema ou serviço acessar recursos de forma controlada, geralmente sem guardar senha manualmente.
+[^certificado]: Arquivo ou registro digital usado para provar a identidade de um sistema, site ou serviço.
+
+## Referências
+
+Estas recomendações seguem boas práticas de segurança conhecidas:
+
+- [NIST SP 800-63B](https://pages.nist.gov/800-63-4/sp800-63b.html), que trata senhas, autenticadores, códigos de recuperação e métodos restritos como SMS/voz.
+- [CISA: Implementing Phishing-Resistant MFA](https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf), que recomenda MFA resistente a phishing para contas e sistemas.
+- [OWASP Multifactor Authentication Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Multifactor_Authentication_Cheat_Sheet.html), que explica TOTP, tokens, chaves de segurança e riscos comuns.
