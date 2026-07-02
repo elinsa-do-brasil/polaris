@@ -1,0 +1,11 @@
+{
+  "title": "Ética e conduta",
+  "icon": "Scale",
+  "defaultOpen": false,
+  "pages": [
+    "index",
+    "codigo-de-conduta",
+    "o-que-pode-ser-denunciado",
+    "como-denunciar"
+  ]
+}
