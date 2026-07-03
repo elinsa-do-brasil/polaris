@@ -10,13 +10,35 @@ export const translations = i18n
   .add({
     pt: {
       displayName: "Português",
+      "Choose a language(language switcher)": "Escolha um idioma",
+      "Copy Markdown(page actions)": "Copiar como Markdown",
+      "Open(page actions)": "Abrir",
+      "View as Markdown(page actions)": "Ver como código",
+      "Open in ChatGPT(page actions)": "Perguntar ao ChatGPT",
+      "Open in Claude(page actions)": "Perguntar ao Claude",
+      "Search(search dialog)": "Pesquisar",
+      "Search(search trigger)": "Pesquisar",
+      "On this page(table of contents)": "Nesta página",
+      "No results found(search dialog)": "Nenhum resultado encontrado",
+      "Back to Home(404 page)": "Voltar para a página inicial",
     },
     es: {
       displayName: "Español",
+      "Choose a language(language switcher)": "Elegir un idioma",
+      "Copy Markdown(page actions)": "Copiar como Markdown",
+      "Open(page actions)": "Abrir",
+      "View as Markdown(page actions)": "Ver como código",
+      "Open in ChatGPT(page actions)": "Preguntar a ChatGPT",
+      "Open in Claude(page actions)": "Preguntar a Claude",
+      "Search(search dialog)": "Buscar",
+      "Search(search trigger)": "Buscar",
+      "On this page(table of contents)": "En esta página",
+      "No results found(search dialog)": "No se encontraron resultados",
+      "Back to Home(404 page)": "Volver a la página de inicio",
     },
   });
 
-export function baseOptions(locale: string): BaseLayoutProps {
+export function baseOptions(_locale: string): BaseLayoutProps {
   return {
     nav: {
       // JSX supported

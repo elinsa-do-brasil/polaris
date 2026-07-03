@@ -13,7 +13,11 @@
     "check": "biome check --write"
   },
   "dependencies": {
+    "@fuma-translate/react": "^1.0.2",
     "@fumadocs/language": "^0.1.0",
+    "@radix-ui/react-popover": "^1.1.17",
+    "class-variance-authority": "^0.7.1",
+    "cnfast": "^0.0.8",
     "fumadocs-core": "16.10.5",
     "fumadocs-mdx": "15.0.12",
     "fumadocs-ui": "16.10.5",
@@ -21,6 +25,7 @@
     "next": "16.2.9",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
+    "react-icons": "^5.7.0",
     "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
