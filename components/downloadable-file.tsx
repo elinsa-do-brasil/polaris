@@ -141,8 +141,8 @@ export function DownloadableFile({
   const downloadName = fileName ?? href.split(/[/?#]/).filter(Boolean).pop();
 
   return (
-    <Card className={cn("my-6", className)}>
-      <CardContent className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <Card className={cn("not-prose my-6 p-2 w-full max-w-sm", className)}>
+      <CardContent className="flex max-w-full flex-col gap-4 p-3 sm:flex-row sm:items-center">
         <div className="flex min-w-0 gap-4">
           <div className="flex size-11 shrink-0 items-center justify-center rounded-md border bg-fd-background">
             <Icon
@@ -151,28 +151,26 @@ export function DownloadableFile({
             />
           </div>
           <div className="min-w-0 space-y-1">
-            <p className="m-0 text-sm font-medium leading-6 text-fd-foreground">
+            <p className="m-0 text-sm font-semibold leading-6 text-fd-foreground">
               {title}
             </p>
             <p className="m-0 text-sm leading-6 text-fd-muted-foreground">
               {description}
             </p>
-            <p className="m-0 text-xs font-medium uppercase leading-5 text-fd-muted-foreground">
-              {extension ? extension : style.label}
-            </p>
+
+            <a
+              className={cn(
+                buttonVariants({ size: "sm", variant: "primary" }),
+                "w-full shrink-0 gap-2 px-4 py-2 no-underline hover:no-underline sm:w-auto [&_svg]:size-4 mt-2",
+              )}
+              download={downloadName}
+              href={href}
+            >
+              <Download aria-hidden="true" />
+              {buttonLabel}
+            </a>
           </div>
         </div>
-        <a
-          className={cn(
-            buttonVariants({ size: "sm", variant: "secondary" }),
-            "w-full shrink-0 gap-2 sm:w-auto [&_svg]:size-4",
-          )}
-          download={downloadName}
-          href={href}
-        >
-          <Download aria-hidden="true" />
-          {buttonLabel}
-        </a>
       </CardContent>
     </Card>
   );
