@@ -2,6 +2,7 @@ import { i18nProvider } from "fumadocs-ui/i18n";
 import { RootProvider } from "fumadocs-ui/provider/next";
 import type { Metadata } from "next";
 import "@/app/global.css";
+import { Analytics } from "@vercel/analytics/next"
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
 import { Inter } from "next/font/google";
 import { baseOptions, translations } from "@/lib/layout.shared";
@@ -35,6 +36,7 @@ export default async function Layout({
             {children}
           </DocsLayout>
         </RootProvider>
+        <Analytics />
       </body>
     </html>
   );
