@@ -17,6 +17,7 @@
     "@fumadocs/language": "^0.1.0",
     "@radix-ui/react-popover": "^1.1.18",
     "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
     "class-variance-authority": "^0.7.1",
     "cnfast": "^0.0.8",
     "fumadocs-core": "16.10.7",
