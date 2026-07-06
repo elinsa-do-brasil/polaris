@@ -1,0 +1,6 @@
+{
+  "title": "Políticas",
+  "icon": "ShieldCheck",
+  "defaultOpen": false,
+  "pages": ["index", "politica-de-seguranca-de-conta"]
+}

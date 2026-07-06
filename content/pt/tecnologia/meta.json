@@ -1,0 +1,6 @@
+{
+  "title": "Tecnologia",
+  "icon": "MonitorCog",
+  "defaultOpen": false,
+  "pages": ["index", "politicas", "padronizacao"]
+}
