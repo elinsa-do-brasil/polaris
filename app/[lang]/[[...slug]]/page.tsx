@@ -18,7 +18,7 @@ export default async function Page(props: PageProps<"/[lang]/[[...slug]]">) {
   if (!page) notFound();
 
   const MDX = page.data.body;
-  const markdownUrl = getPageMarkdownUrl(page).url;
+  const markdownUrl = getPageMarkdownUrl(page).path;
 
   return (
     <DocsPage
