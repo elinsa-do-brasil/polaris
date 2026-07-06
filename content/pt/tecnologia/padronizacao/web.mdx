@@ -3,9 +3,9 @@ title: "Padronização para web"
 description: "Stack recomendada para sites, portais, aplicações web e automações integradas ao ambiente digital da Elinsa."
 ---
 
-Esta especificação mostra a base técnica recomendada para soluções web da Elinsa, como sites, portais internos, áreas restritas, formulários, painéis, sistemas acessados pelo navegador e automações integradas ao ambiente digital da empresa.
+Esta especificação mostra como aplicar a política de padronização em soluções web da Elinsa, como sites, portais internos, áreas restritas, formulários, painéis, sistemas acessados pelo navegador e automações integradas ao ambiente digital da empresa.
 
-Os motivos, requisitos gerais, cuidados de segurança, documentação mínima e checklist de aprovação ficam na página de [Padronização](./). Esta página deve ser usada como complemento: ela responde, de forma prática, qual stack recomendamos para projetos web.
+Os motivos, requisitos gerais, cuidados de segurança, documentação mínima e checklist de aprovação ficam na [Política de padronização de soluções digitais](../politicas/politica-de-padronizacao). Esta página complementa a política e define a stack recomendada para projetos web.
 
 <Callout type="info">
   Nenhum site, portal, aplicação web ou automação integrada deve entrar em produção sem revisão e aprovação da TI.
@@ -17,18 +17,18 @@ Os motivos, requisitos gerais, cuidados de segurança, documentação mínima e 
 
 Para sistemas web e automações integradas ao ecossistema digital da Elinsa, a preferência é usar a mesma base técnica adotada neste site. Essa base reúne tecnologias modernas, open source, com documentação pública, comunidade ativa e licenças conhecidas e permissivas.
 
-| Tecnologia | Finalidade | Quando isso ajuda |
+| Tecnologia | Finalidade | Quando usar |
 |---|---|---|
-| **Next.js** | Base para sites e portais. | Quando a ideia precisa virar uma página, portal interno ou sistema acessado por link. |
-| **React** | Telas e interações. | Quando as pessoas precisam preencher formulários, clicar em botões, filtrar listas ou acompanhar painéis. |
-| **TypeScript** | Código mais fácil de revisar. | Quando o código vai ser mantido pela empresa ou precisa ser entendido por mais de uma pessoa. |
-| **Payload CMS** | Painel para editar conteúdo. | Quando uma área precisa atualizar textos, imagens, notícias, blogs ou páginas sem pedir alteração no código. |
-| **PostgreSQL** | Armazenamento de dados. | Quando é preciso guardar registros importantes, como cadastros, solicitações, históricos, respostas ou configurações. |
-| **Drizzle ORM** | Organização do banco de dados. | Quando existe banco de dados e a equipe técnica precisa evoluir sua estrutura sem perder controle do que mudou. |
-| **Better Auth** | Login e permissões. | Quando nem todo mundo pode ver ou alterar as mesmas informações. |
-| **Tailwind CSS** | Aparência visual consistente. | Quando a solução precisa parecer parte do mesmo ambiente digital da Elinsa. |
-| **shadcn/ui** | Componentes prontos de interface. | Quando a tela precisa de elementos comuns, como botões, campos, tabelas, menus ou janelas de confirmação. |
-| **Infraestrutura corporativa** | Publicação e operação segura. | Quando a solução deixa de ser um teste pessoal e não pode depender do computador, conta ou senha de uma pessoa só. |
+| **Next.js** | Base para sites e portais. | Páginas, portais internos e sistemas acessados por link. |
+| **React** | Telas e interações. | Formulários, botões, filtros, listas e painéis. |
+| **TypeScript** | Código mais fácil de revisar. | Projetos mantidos pela empresa ou por mais de uma pessoa. |
+| **Payload CMS** | Painel para editar conteúdo. | Conteúdos que precisam ser atualizados sem alteração no código. |
+| **PostgreSQL** | Armazenamento de dados. | Cadastros, solicitações, históricos, respostas e configurações. |
+| **Drizzle ORM** | Organização do banco de dados. | Projetos com banco de dados que precisam evoluir com controle de mudanças. |
+| **Better Auth** | Login e permissões. | Soluções com áreas restritas, perfis de acesso ou permissões diferentes. |
+| **Tailwind CSS** | Aparência visual consistente. | Interfaces que devem seguir o mesmo padrão visual da Elinsa. |
+| **shadcn/ui** | Componentes prontos de interface. | Telas com botões, campos, tabelas, menus e janelas de confirmação. |
+| **Infraestrutura corporativa** | Publicação e operação segura. | Soluções que saem do teste e passam a fazer parte da rotina da empresa. |
 
 Essa stack deve ser o ponto de partida para novos projetos web porque já existe conhecimento interno, padrões de código, componentes reutilizáveis e experiência de operação.
 
@@ -49,4 +49,4 @@ Evite implantar uma solução web corporativa baseada em:
 - login, permissões ou compartilhamento de links sem controle da empresa;
 - dependências sem licença clara ou incompatíveis com uso corporativo.
 
-Para a aprovação final, use o [Checklist de aprovação](./#checklist-de-aprovacao) da página geral de padronização.
+Para a aprovação final, use o [Checklist de aprovação](../politicas/politica-de-padronizacao#checklist-de-aprovacao) da política geral.
