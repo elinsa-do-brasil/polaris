@@ -6,6 +6,9 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
 import { Inter } from "next/font/google";
+import iconIco from "@/assets/favicon/e.ico";
+import iconPng from "@/assets/favicon/e.png";
+import iconSvg from "@/assets/favicon/e.svg";
 import { baseOptions, translations } from "@/lib/layout.shared";
 import { source } from "@/lib/source";
 
@@ -21,20 +24,20 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/favicon/e.svg",
+        url: iconSvg.src,
         type: "image/svg+xml",
       },
       {
-        url: "/favicon/e.png",
+        url: iconPng.src,
         type: "image/png",
         sizes: "32x32",
       },
       {
-        url: "/favicon/e.ico",
+        url: iconIco.src,
       },
     ],
-    shortcut: "/favicon/e.ico",
-    apple: "/favicon/e.png",
+    shortcut: iconIco.src,
+    apple: iconPng.src,
   },
 };
 
