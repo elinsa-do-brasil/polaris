@@ -2,5 +2,5 @@
   "title": "Denúncias",
   "icon": "TriangleAlert",
   "defaultOpen": false,
-  "pages": ["index", "o-que-pode-ser-denunciado", "como-denunciar"]
+  "pages": ["index", "o-que-pode-ser-denunciado", "...como-denunciar"]
 }
