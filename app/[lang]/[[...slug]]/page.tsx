@@ -11,6 +11,7 @@ import { notFound } from "next/navigation";
 import { ViewOptionsPopover } from "@/components/ai/page-actions";
 import { getMDXComponents } from "@/components/mdx";
 import { getPageImage, getPageMarkdownUrl, source } from "@/lib/source";
+import { Clock9 } from "lucide-react";
 
 export default async function Page(props: PageProps<"/[lang]/[[...slug]]">) {
   const params = await props.params;
@@ -43,6 +44,12 @@ export default async function Page(props: PageProps<"/[lang]/[[...slug]]">) {
           })}
         />
       </DocsBody>
+      {page.data.lastModified ? (
+        <p className="text-sm text-fd-muted-foreground my-6 py-6 border-t border-t-fd-border border-b border-b-fd-border flex flex-row gap-2 items-center">
+          <Clock9 size={14} />
+          {formatLastModified(page.data.lastModified, params.lang)}
+        </p>
+      ) : null}
     </DocsPage>
   );
 }
@@ -65,4 +72,16 @@ export async function generateMetadata(
       images: getPageImage(page).url,
     },
   };
+}
+
+function formatLastModified(date: Date, language: string | undefined) {
+  const locale = language === "es" ? "es-ES" : "pt-BR";
+  const prefix = language === "es" ? "Actualizado el" : "Atualizado em";
+  const formattedDate = new Intl.DateTimeFormat(locale, {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(date);
+
+  return `${prefix} ${formattedDate}`;
 }

@@ -21,6 +21,7 @@ export const translations = i18n
       "On this page(table of contents)": "Nesta página",
       "No results found(search dialog)": "Nenhum resultado encontrado",
       "Back to Home(404 page)": "Voltar para a página inicial",
+      "Last updated on(page footer)": "Atualizado pela última vez em",
     },
     es: {
       displayName: "Español",
@@ -35,6 +36,7 @@ export const translations = i18n
       "On this page(table of contents)": "En esta página",
       "No results found(search dialog)": "No se encontraron resultados",
       "Back to Home(404 page)": "Volver a la página de inicio",
+      "Last updated on(page footer)": "Última actualización el",
     },
   });
 
