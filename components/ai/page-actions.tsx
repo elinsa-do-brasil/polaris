@@ -83,7 +83,7 @@ export function ViewOptionsPopover({
       typeof window === "undefined"
         ? pathname
         : new URL(pathname, window.location.origin);
-    const q = t("Leia {url}, e me ajude a entender melhor", {
+    const q = t("Leia {url}, e me ajude a esclarecer minhas dúvidas", {
       variables: { url: String(pageUrl) },
     });
 
