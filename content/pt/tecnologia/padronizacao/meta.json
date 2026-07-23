@@ -2,5 +2,5 @@
   "title": "Padronização",
   "icon": "Settings",
   "defaultOpen": true,
-  "pages": ["index", "web"]
+  "pages": ["web"]
 }

@@ -1,6 +1,5 @@
 {
   "title": "Código de conduta",
   "defaultOpen": false,
-  "icon": "NotebookTabs",
-  "pages": ["index"]
+  "icon": "NotebookTabs"
 }

@@ -3,7 +3,6 @@
   "icon": "MonitorCog",
   "defaultOpen": false,
   "pages": [
-    "index",
     "bom-uso-dos-equipamentos-da-empresa",
     "...como-definir-a-assinatura-de-email",
     "politicas",

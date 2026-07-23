@@ -2,5 +2,5 @@
   "title": "Ética e conduta",
   "icon": "Scale",
   "defaultOpen": false,
-  "pages": ["index", "codigo-de-conduta", "denuncias"]
+  "pages": ["codigo-de-conduta", "denuncias"]
 }
