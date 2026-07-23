@@ -6,12 +6,12 @@ import {
   MarkdownCopyButton,
 } from "fumadocs-ui/layouts/docs/page";
 import { createRelativeLink } from "fumadocs-ui/mdx";
+import { Clock9 } from "lucide-react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ViewOptionsPopover } from "@/components/ai/page-actions";
 import { getMDXComponents } from "@/components/mdx";
 import { getPageImage, getPageMarkdownUrl, source } from "@/lib/source";
-import { Clock9 } from "lucide-react";
 
 export default async function Page(props: PageProps<"/[lang]/[[...slug]]">) {
   const params = await props.params;
@@ -46,8 +46,12 @@ export default async function Page(props: PageProps<"/[lang]/[[...slug]]">) {
       </DocsBody>
       {page.data.lastModified ? (
         <p className="text-sm text-fd-muted-foreground my-6 py-6 border-t border-t-fd-border border-b border-b-fd-border flex flex-row gap-2 items-center">
-          <Clock9 size={14} />
-          {formatLastModified(page.data.lastModified, params.lang)}
+          <Clock9 aria-hidden="true" size={14} />
+          {formatLastModified(
+            page.data.lastModified,
+            params.lang,
+            page.data.lastModifiedBy,
+          )}
         </p>
       ) : null}
     </DocsPage>
@@ -74,7 +78,11 @@ export async function generateMetadata(
   };
 }
 
-function formatLastModified(date: Date, language: string | undefined) {
+function formatLastModified(
+  date: Date,
+  language: string | undefined,
+  author?: string,
+) {
   const locale = language === "es" ? "es-ES" : "pt-BR";
   const prefix = language === "es" ? "Actualizado el" : "Atualizado em";
   const formattedDate = new Intl.DateTimeFormat(locale, {
@@ -82,6 +90,7 @@ function formatLastModified(date: Date, language: string | undefined) {
     month: "long",
     year: "numeric",
   }).format(date);
+  const attribution = author ? ` por ${author}` : "";
 
-  return `${prefix} ${formattedDate}`;
+  return `${prefix} ${formattedDate}${attribution}`;
 }
