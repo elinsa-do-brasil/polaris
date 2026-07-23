@@ -2,5 +2,11 @@
   "title": "Tecnologia",
   "icon": "MonitorCog",
   "defaultOpen": false,
-  "pages": ["index", "politicas", "padronizacao"]
+  "pages": [
+    "index",
+    "bom-uso-dos-equipamentos-da-empresa",
+    "como-definir-a-assinatura-de-email",
+    "politicas",
+    "padronizacao"
+  ]
 }
