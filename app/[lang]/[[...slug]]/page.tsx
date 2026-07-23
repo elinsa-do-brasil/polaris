@@ -34,7 +34,7 @@ export default async function Page(props: PageProps<"/[lang]/[[...slug]]">) {
       </DocsDescription>
       <div className="flex flex-row gap-2 items-center border-b pb-6">
         <MarkdownCopyButton markdownUrl={markdownUrl} />
-        <ViewOptionsPopover markdownUrl={markdownUrl} />
+        <ViewOptionsPopover />
       </div>
       <DocsBody>
         <MDX

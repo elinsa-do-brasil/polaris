@@ -11,9 +11,8 @@ export const translations = i18n
     pt: {
       displayName: "Português",
       "Choose a language(language switcher)": "Escolha um idioma",
-      "Copy Markdown(page actions)": "Copiar como Markdown",
-      "Open(page actions)": "Abrir",
-      "View as Markdown(page actions)": "Ver como código",
+      "Copy Markdown(page actions)": "Copiar conteúdo",
+      "Open(page actions)": "Tem dúvidas sobre este conteúdo?",
       "Open in ChatGPT(page actions)": "Perguntar ao ChatGPT",
       "Open in Claude(page actions)": "Perguntar ao Claude",
       "Search(search dialog)": "Pesquisar",
@@ -26,9 +25,8 @@ export const translations = i18n
     es: {
       displayName: "Español",
       "Choose a language(language switcher)": "Elegir un idioma",
-      "Copy Markdown(page actions)": "Copiar como Markdown",
-      "Open(page actions)": "Abrir",
-      "View as Markdown(page actions)": "Ver como código",
+      "Copy Markdown(page actions)": "Copiar contenido",
+      "Open(page actions)": "Tienes preguntas sobre este contenido?",
       "Open in ChatGPT(page actions)": "Preguntar a ChatGPT",
       "Open in Claude(page actions)": "Preguntar a Claude",
       "Search(search dialog)": "Buscar",

@@ -2,13 +2,7 @@
 import { useTranslations } from "@fuma-translate/react";
 import { usePathname } from "fumadocs-core/framework";
 import { useCopyButton } from "fumadocs-ui/utils/use-copy-button";
-import {
-  Check,
-  ChevronDown,
-  Copy,
-  ExternalLinkIcon,
-  TextIcon,
-} from "lucide-react";
+import { Check, ChevronDown, Copy, ExternalLinkIcon } from "lucide-react";
 import { type ComponentProps, useMemo, useState } from "react";
 import { SiClaude } from "react-icons/si";
 import { cn } from "../../lib/cn";
@@ -74,15 +68,9 @@ export function MarkdownCopyButton({
  * see https://fumadocs.dev/docs/integrations/llms#page-actions to customize.
  */
 export function ViewOptionsPopover({
-  markdownUrl,
   githubUrl,
   ...props
 }: ComponentProps<typeof PopoverTrigger> & {
-  /**
-   * A URL to the raw Markdown/MDX content of page
-   */
-  markdownUrl?: string;
-
   /**
    * Source file URL on GitHub
    */
@@ -110,11 +98,6 @@ export function ViewOptionsPopover({
           </svg>
         ),
       },
-      markdownUrl && {
-        title: t("View as Markdown"),
-        href: markdownUrl,
-        icon: <TextIcon />,
-      },
       {
         title: t("Open in ChatGPT"),
         href: `https://chatgpt.com/?${new URLSearchParams({
@@ -141,7 +124,7 @@ export function ViewOptionsPopover({
         icon: <SiClaude className="size-4" />,
       },
     ].filter((v) => !!v);
-  }, [githubUrl, markdownUrl, pathname, t]);
+  }, [githubUrl, pathname, t]);
 
   return (
     <Popover>
