@@ -1,9 +1,0 @@
-{
-  "title": "Políticas",
-  "icon": "ShieldCheck",
-  "defaultOpen": false,
-  "pages": [
-    "politica-de-seguranca-de-conta",
-    "politica-de-padronizacao"
-  ]
-}
