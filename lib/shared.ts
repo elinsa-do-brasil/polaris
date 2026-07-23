@@ -3,7 +3,7 @@ export const docsRoute = "/";
 export const docsImageRoute = "/og/docs";
 export const docsContentRoute = "/llms.mdx/docs";
 
-const fallbackDomain = "elinsa.com.br";
+const fallbackDocsOrigin = "https://docs.elinsadobrasil.com.br";
 
 function normalizeOrigin(value: string) {
   const trimmed = value.trim().replace(/\/+$/, "");
@@ -16,22 +16,7 @@ function getDocsOrigin() {
   const explicitDocsUrl = process.env.NEXT_PUBLIC_DOCS_URL;
   if (explicitDocsUrl) return normalizeOrigin(explicitDocsUrl);
 
-  const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    process.env.NEXT_PUBLIC_APP_URL ??
-    process.env.SITE_URL ??
-    process.env.APP_URL ??
-    process.env.VERCEL_PROJECT_PRODUCTION_URL ??
-    fallbackDomain;
-
-  const origin = normalizeOrigin(baseUrl);
-  const url = new URL(origin);
-
-  if (!url.hostname.startsWith("docs.")) {
-    url.hostname = `docs.${url.hostname}`;
-  }
-
-  return url.origin;
+  return fallbackDocsOrigin;
 }
 
 export const docsOrigin = getDocsOrigin();

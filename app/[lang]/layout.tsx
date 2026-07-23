@@ -10,6 +10,7 @@ import iconIco from "@/assets/favicon/e.ico";
 import iconPng from "@/assets/favicon/e.png";
 import iconSvg from "@/assets/favicon/e.svg";
 import { baseOptions, translations } from "@/lib/layout.shared";
+import { docsOrigin } from "@/lib/shared";
 import { source } from "@/lib/source";
 
 const inter = Inter({
@@ -17,6 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(docsOrigin),
   title: {
     template: "%s | Elinsa",
     default: "Docs | Elinsa",

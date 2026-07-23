@@ -11,6 +11,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ViewOptionsPopover } from "@/components/ai/page-actions";
 import { getMDXComponents } from "@/components/mdx";
+import { appName, createDocsUrl } from "@/lib/shared";
 import { getPageImage, getPageMarkdownUrl, source } from "@/lib/source";
 
 export default async function Page(props: PageProps<"/[lang]/[[...slug]]">) {
@@ -69,11 +70,46 @@ export async function generateMetadata(
   const page = source.getPage(params.slug, params.lang);
   if (!page) notFound();
 
+  const socialTitle = page.data.socialTitle ?? page.data.title;
+  const socialDescription =
+    page.data.socialDescription ?? page.data.description;
+  const canonicalUrl = createDocsUrl(page.url);
+  const image = getPageImage(page);
+
   return {
     title: page.data.title,
     description: page.data.description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
-      images: getPageImage(page).url,
+      title: socialTitle,
+      description: socialDescription,
+      type: "article",
+      url: canonicalUrl,
+      siteName: appName,
+      locale: params.lang === "es" ? "es_ES" : "pt_BR",
+      images: [
+        {
+          url: image.url,
+          width: 1200,
+          height: 630,
+          alt: socialTitle,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: socialTitle,
+      description: socialDescription,
+      images: [
+        {
+          url: image.url,
+          width: 1200,
+          height: 630,
+          alt: socialTitle,
+        },
+      ],
     },
   };
 }
