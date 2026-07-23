@@ -4,12 +4,14 @@ import type { MDXComponents } from "mdx/types";
 import { cn } from "@/lib/cn";
 import { Copyable } from "./copyable";
 import { DownloadableFile } from "./downloadable-file";
+import { YouTubeEmbed } from "./youtube-embed";
 
 export function getMDXComponents(components?: MDXComponents) {
   return {
     ...defaultMdxComponents,
     Copyable,
     DownloadableFile,
+    YouTubeEmbed,
     img: (props) => (
       <ImageZoom
         {...(props as any)}
