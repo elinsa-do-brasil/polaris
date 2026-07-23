@@ -18,7 +18,7 @@ export function YouTubeEmbed({ videoId, title, className }: YouTubeEmbedProps) {
   return (
     <div
       className={cn(
-        "not-prose my-6 overflow-hidden rounded-lg border bg-black shadow-sm",
+        "not-prose my-6 overflow-hidden rounded-lg border shadow-sm",
         className,
       )}
     >
