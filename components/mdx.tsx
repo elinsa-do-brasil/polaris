@@ -4,6 +4,7 @@ import type { MDXComponents } from "mdx/types";
 import { cn } from "@/lib/cn";
 import { Copyable } from "./copyable";
 import { DownloadableFile } from "./downloadable-file";
+import { VideoEmbed } from "./video-embed";
 import { YouTubeEmbed } from "./youtube-embed";
 
 export function getMDXComponents(components?: MDXComponents) {
@@ -11,6 +12,7 @@ export function getMDXComponents(components?: MDXComponents) {
     ...defaultMdxComponents,
     Copyable,
     DownloadableFile,
+    VideoEmbed,
     YouTubeEmbed,
     img: (props) => (
       <ImageZoom
