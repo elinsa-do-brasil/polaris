@@ -24,26 +24,20 @@ export function lastModifiedAuthor(): Plugin {
   };
 }`;
       },
-      serverOptions(options) {
-        options.doc ??= {};
-        options.doc.passthroughs ??= [];
-        options.doc.passthroughs.push("lastModifiedBy");
-      },
     },
     config() {
-      const { workspace } = this.core.getOptions();
-      cwd = workspace ? path.resolve(workspace.dir) : process.cwd();
+      const { root, workspace } = this.core;
+      cwd = workspace ? path.resolve(root, workspace.dir) : root;
     },
     doc: {
-      async vfile(file) {
+      async frontmatter(data) {
         const author = await getLastModifiedAuthor(this.filePath, cwd);
         if (!author) return;
 
-        file.data["mdx-export"] ??= [];
-        file.data["mdx-export"].push({
-          name: "lastModifiedBy",
-          value: author,
-        });
+        return {
+          ...data,
+          lastModifiedBy: author,
+        };
       },
     },
   };
