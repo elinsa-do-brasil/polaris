@@ -56,7 +56,7 @@ export function OutlookCompatibilityTable() {
                   className="size-7 shrink-0 object-contain"
                   unoptimized
                 />
-                Outlook clássico
+                Outlook (classic)
               </div>
             </td>
             <td className="border-l border-fd-border px-4 py-2 font-medium">
