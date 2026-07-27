@@ -22,7 +22,7 @@ export function OutlookCompatibilityTable() {
               className="border-l border-fd-border px-4 py-2 font-medium"
               scope="col"
             >
-              Este tutorial funciona?
+              Posso seguir este guia?
             </th>
           </tr>
         </thead>
@@ -56,7 +56,7 @@ export function OutlookCompatibilityTable() {
                   className="size-7 shrink-0 object-contain"
                   unoptimized
                 />
-                Outlook (classic)
+                Outlook clássico
               </div>
             </td>
             <td className="border-l border-fd-border px-4 py-2 font-medium">
