@@ -2,8 +2,5 @@
   "title": "Tecnologia",
   "icon": "MonitorCog",
   "defaultOpen": false,
-  "pages": [
-    "bom-uso-dos-equipamentos-da-empresa",
-    "email"
-  ]
+  "pages": ["bom-uso-dos-equipamentos-da-empresa", "email"]
 }

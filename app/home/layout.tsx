@@ -1,5 +1,5 @@
-import { HomeLayout } from "fumadocs-ui/layouts/home";
 import { i18nProvider } from "fumadocs-ui/i18n";
+import { HomeLayout } from "fumadocs-ui/layouts/home";
 import { RootProvider } from "fumadocs-ui/provider/next";
 import { i18n } from "@/lib/i18n";
 import { baseOptions, translations } from "@/lib/layout.shared";

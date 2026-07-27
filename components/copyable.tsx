@@ -31,7 +31,10 @@ export function Copyable({ text, className, onCopy }: CopyableProps) {
       onClick={handleCopy}
       title={actionLabel}
     >
-      <span className="min-w-0 truncate px-2.5 py-1.5 leading-5 font-semibold" title="Toque para copiar">
+      <span
+        className="min-w-0 truncate px-2.5 py-1.5 leading-5 font-semibold"
+        title="Toque para copiar"
+      >
         {text}
       </span>
       <span className="flex shrink-0 items-center justify-center border-s px-2 text-fd-muted-foreground transition-colors group-hover:border-fd-primary/30 group-hover:bg-fd-primary/10 group-hover:text-fd-foreground [&_svg]:size-4">
