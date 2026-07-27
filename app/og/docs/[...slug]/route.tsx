@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
 import { ImageResponse } from "next/og";
-import { appName } from "@/lib/shared";
 import { getPageImage, parseLocalizedPageSlug, source } from "@/lib/source";
 
 export const revalidate = false;
@@ -16,7 +15,7 @@ export async function GET(
 
   const title = page.data.socialTitle ?? page.data.title;
   const section = formatSection(page.slugs[0]);
-  const fontSize = title.length > 80 ? 54 : title.length > 55 ? 62 : 70;
+  const fontSize = title.length > 80 ? 58 : title.length > 55 ? 68 : 76;
 
   return new ImageResponse(
     <div
@@ -63,8 +62,7 @@ export async function GET(
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-between",
-          padding: "58px 68px 50px",
+          padding: "68px 96px",
           position: "relative",
         }}
       >
@@ -75,8 +73,8 @@ export async function GET(
           }}
         >
           <svg
-            width="56"
-            height="56"
+            width="80"
+            height="80"
             viewBox="0 0 1024 1024"
             fill="none"
             aria-hidden="true"
@@ -90,12 +88,12 @@ export async function GET(
             style={{
               display: "flex",
               flexDirection: "column",
-              marginLeft: 16,
+              marginLeft: 20,
             }}
           >
             <span
               style={{
-                fontSize: 27,
+                fontSize: 36,
                 fontWeight: 700,
                 letterSpacing: "-0.02em",
               }}
@@ -104,9 +102,9 @@ export async function GET(
             </span>
             <span
               style={{
-                marginTop: 2,
+                marginTop: 3,
                 color: "#597183",
-                fontSize: 17,
+                fontSize: 21,
                 letterSpacing: "0.04em",
               }}
             >
@@ -117,23 +115,24 @@ export async function GET(
 
         <div
           style={{
-            maxWidth: 1030,
+            maxWidth: 960,
             display: "flex",
             flexDirection: "column",
+            marginTop: 88,
           }}
         >
           <span
             style={{
               alignSelf: "flex-start",
-              marginBottom: 18,
-              padding: "8px 16px",
+              marginBottom: 24,
+              padding: "11px 20px",
               border: "1px solid #a9dbef",
               borderRadius: 999,
               background: "#e8f7fc",
               color: "#116f99",
-              fontSize: 18,
+              fontSize: 22,
               fontWeight: 700,
-              letterSpacing: "0.08em",
+              letterSpacing: "0.07em",
               textTransform: "uppercase",
             }}
           >
@@ -149,29 +148,6 @@ export async function GET(
           >
             {title}
           </span>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            color: "#597183",
-            fontSize: 19,
-          }}
-        >
-          <span
-            style={{
-              width: 42,
-              height: 5,
-              display: "flex",
-              marginRight: 14,
-              background: "#24a3dd",
-              borderRadius: 999,
-            }}
-          />
-          {appName}
-          <span style={{ margin: "0 10px", color: "#9db0bc" }}>·</span>
-          docs.elinsadobrasil.com.br
         </div>
       </div>
     </div>,
