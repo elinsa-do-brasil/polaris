@@ -1,6 +1,6 @@
 import Image from "next/image";
-import novoOutlook from "@/content/pt/tecnologia/email/assinatura-de-email-da-elinsa/novo-outlook.svg";
-import outlookClassico from "@/content/pt/tecnologia/email/assinatura-de-email-da-elinsa/outlook-classico.svg";
+import novoOutlook from "@/content/tecnologia/email/assinatura-de-email-da-elinsa/novo-outlook.svg";
+import outlookClassico from "@/content/tecnologia/email/assinatura-de-email-da-elinsa/outlook-classico.svg";
 
 export function OutlookCompatibilityTable() {
   return (

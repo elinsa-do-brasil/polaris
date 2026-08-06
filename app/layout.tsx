@@ -1,4 +1,3 @@
-import { i18nProvider } from "fumadocs-ui/i18n";
 import { RootProvider } from "fumadocs-ui/provider/next";
 import type { Metadata } from "next";
 import "@/app/global.css";
@@ -43,20 +42,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function Layout({
-  params,
-  children,
-}: {
-  params: Promise<{ lang: string }>;
-  children: React.ReactNode;
-}) {
-  const lang = (await params).lang;
-
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang={lang} className={inter.className} suppressHydrationWarning>
+    <html lang="pt-BR" className={inter.className} suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
-        <RootProvider i18n={i18nProvider(translations, lang)}>
-          <DocsLayout tree={source.getPageTree(lang)} {...baseOptions(lang)}>
+        <RootProvider i18n={{ translations }}>
+          <DocsLayout tree={source.getPageTree()} {...baseOptions()}>
             {children}
           </DocsLayout>
         </RootProvider>

@@ -14,9 +14,9 @@ import { getMDXComponents } from "@/components/mdx";
 import { appName, createDocsUrl } from "@/lib/shared";
 import { getPageImage, getPageMarkdownUrl, source } from "@/lib/source";
 
-export default async function Page(props: PageProps<"/[lang]/[[...slug]]">) {
+export default async function Page(props: PageProps<"/[[...slug]]">) {
   const params = await props.params;
-  const page = source.getPage(params.slug, params.lang);
+  const page = source.getPage(params.slug);
   if (!page) notFound();
 
   const MDX = page.data.body;
@@ -48,11 +48,7 @@ export default async function Page(props: PageProps<"/[lang]/[[...slug]]">) {
       {page.data.lastModified ? (
         <p className="text-sm text-fd-muted-foreground my-6 py-6 border-t border-t-fd-border border-b border-b-fd-border flex flex-row gap-2 items-center">
           <Clock9 aria-hidden="true" size={14} />
-          {formatLastModified(
-            page.data.lastModified,
-            params.lang,
-            page.data.lastModifiedBy,
-          )}
+          {formatLastModified(page.data.lastModified, page.data.lastModifiedBy)}
         </p>
       ) : null}
     </DocsPage>
@@ -64,10 +60,10 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(
-  props: PageProps<"/[lang]/[[...slug]]">,
+  props: PageProps<"/[[...slug]]">,
 ): Promise<Metadata> {
   const params = await props.params;
-  const page = source.getPage(params.slug, params.lang);
+  const page = source.getPage(params.slug);
   if (!page) notFound();
 
   const socialTitle = page.data.socialTitle ?? page.data.title;
@@ -88,7 +84,7 @@ export async function generateMetadata(
       type: "article",
       url: canonicalUrl,
       siteName: appName,
-      locale: params.lang === "es" ? "es_ES" : "pt_BR",
+      locale: "pt_BR",
       images: [
         {
           url: image.url,
@@ -114,19 +110,13 @@ export async function generateMetadata(
   };
 }
 
-function formatLastModified(
-  date: Date,
-  language: string | undefined,
-  author?: string,
-) {
-  const locale = language === "es" ? "es-ES" : "pt-BR";
-  const prefix = language === "es" ? "Actualizado el" : "Atualizado em";
-  const formattedDate = new Intl.DateTimeFormat(locale, {
+function formatLastModified(date: Date, author?: string) {
+  const formattedDate = new Intl.DateTimeFormat("pt-BR", {
     day: "numeric",
     month: "long",
     year: "numeric",
   }).format(date);
   const attribution = author ? ` por ${author}` : "";
 
-  return `${prefix} ${formattedDate}${attribution}`;
+  return `Atualizado em ${formattedDate}${attribution}`;
 }

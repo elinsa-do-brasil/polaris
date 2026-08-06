@@ -1,14 +1,6 @@
-import { createI18nMiddleware } from "fumadocs-core/i18n/middleware";
 import { isMarkdownPreferred, rewritePath } from "fumadocs-core/negotiation";
-import {
-  type NextFetchEvent,
-  type NextRequest,
-  NextResponse,
-} from "next/server";
-import { i18n } from "@/lib/i18n";
+import { type NextRequest, NextResponse } from "next/server";
 import { docsContentRoute, docsRoute } from "@/lib/shared";
-
-const i18nMiddleware = createI18nMiddleware(i18n);
 
 const { rewrite: rewriteDocs } = rewritePath(
   `${docsRoute}{/*path}`,
@@ -19,7 +11,7 @@ const { rewrite: rewriteSuffix } = rewritePath(
   `${docsContentRoute}{/*path}/content.md`,
 );
 
-export default function proxy(request: NextRequest, event: NextFetchEvent) {
+export default function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
   const result = rewriteSuffix(pathname);
   if (result) {
@@ -34,7 +26,7 @@ export default function proxy(request: NextRequest, event: NextFetchEvent) {
     }
   }
 
-  return i18nMiddleware(request, event);
+  return NextResponse.next();
 }
 
 export const config = {
