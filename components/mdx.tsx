@@ -3,7 +3,7 @@ import defaultMdxComponents from "fumadocs-ui/mdx";
 import type { MDXComponents } from "mdx/types";
 import { cn } from "@/lib/cn";
 import { Copyable } from "./copyable";
-import { DownloadableFile } from "./downloadable-file";
+import { Download } from "./downloadable-file";
 import { VideoEmbed } from "./video-embed";
 import { YouTubeEmbed } from "./youtube-embed";
 
@@ -11,7 +11,7 @@ export function getMDXComponents(components?: MDXComponents) {
   return {
     ...defaultMdxComponents,
     Copyable,
-    DownloadableFile,
+    Download,
     VideoEmbed,
     YouTubeEmbed,
     img: (props) => (

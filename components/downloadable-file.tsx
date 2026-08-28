@@ -1,6 +1,5 @@
 import {
   AudioLines,
-  Download,
   File,
   FileArchive,
   FileCode,
@@ -12,7 +11,8 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/cn";
-import { buttonVariants } from "./ui/button";
+import { cacheLife } from "next/cache";
+import { DownloadButton } from "./download-button";
 import { Card, CardContent, CardFooter } from "./ui/card";
 
 const fileGroups = {
@@ -129,6 +129,9 @@ function formatFileSize(bytes: number) {
 }
 
 async function getFileSize(href: string) {
+  "use cache";
+  cacheLife("hours");
+
   try {
     const response = await fetch(href, { method: "HEAD" });
     const contentLength = response.headers.get("content-length");
@@ -139,7 +142,7 @@ async function getFileSize(href: string) {
   }
 }
 
-export async function DownloadableFile({
+export async function Download({
   href,
   title,
   description,
@@ -151,7 +154,7 @@ export async function DownloadableFile({
     normalizeExtension(type) ?? extensionFromPath(fileName ?? href);
   const { icon: Icon, iconClassName } = fileStyles[getFileGroup(extension)];
   const downloadName = fileName ?? fileNameFromPath(href);
-  const typeLabel = type?.replace(/^[^/]+\//, "").toUpperCase();
+  const typeLabel = type?.replace(/^[^/]+\//, "");
   const fileSize = await getFileSize(href);
 
   return (
@@ -186,18 +189,12 @@ export async function DownloadableFile({
         <p className="m-0 text-sm leading-6">{description}</p>
       </CardContent>
 
-      <CardFooter className="px-3 py-2">
-        <a
-          className={cn(
-            buttonVariants({ size: "sm", variant: "primary" }),
-            "mt-2 w-full shrink-0 gap-2 px-4 py-2 no-underline hover:no-underline sm:w-auto [&_svg]:size-4",
-          )}
-          download={downloadName}
+      <CardFooter className="py-2">
+        <DownloadButton
+          className="mt-2 w-full shrink-0 px-4 py-2 sm:w-auto"
+          fileName={downloadName}
           href={href}
-        >
-          <Download aria-hidden="true" />
-          Baixar
-        </a>
+        />
       </CardFooter>
     </Card>
   );
