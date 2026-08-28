@@ -1,5 +1,12 @@
 {
-  "title": "Código de conduta",
+  "title": "Código de Ética",
   "defaultOpen": false,
-  "icon": "NotebookTabs"
+  "icon": "NotebookTabs",
+  "pages": [
+    "responsabilidades",
+    "relacionamento-com-clientes-e-fornecedores",
+    "seguranca-da-informacao",
+    "integridade-e-meio-ambiente",
+    "disposicoes-finais"
+  ]
 }
