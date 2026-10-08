@@ -1,0 +1,6 @@
+{
+  "title": "Perguntas frequentes",
+  "icon": "MessageCircleQuestionMark",
+  "defaultOpen": false,
+  "pages": ["...wifi"]
+}
