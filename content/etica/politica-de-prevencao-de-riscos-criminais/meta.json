@@ -1,0 +1,12 @@
+{
+  "title": "Política de Prevenção de Riscos Criminais",
+  "defaultOpen": false,
+  "icon": "ShieldAlert",
+  "pages": [
+    "objetivo",
+    "alcance",
+    "principios-de-atuacao",
+    "bases-do-sistema-de-gestao",
+    "inadimplencia-e-regime-disciplinar"
+  ]
+}

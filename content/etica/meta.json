@@ -2,5 +2,12 @@
   "title": "Ética e conduta",
   "icon": "Scale",
   "defaultOpen": false,
-  "pages": ["codigo-de-conduta", "protocolo-e-medidas-lgbtqiapn", "denuncias"]
+  "pages": [
+    "codigo-de-conduta",
+    "politica-de-prevencao-de-riscos-criminais",
+    "politica-de-diversidade-equidade-e-inclusao",
+    "protocolo-contra-o-assedio-no-trabalho",
+    "protocolo-e-medidas-lgbtqiapn",
+    "denuncias"
+  ]
 }
