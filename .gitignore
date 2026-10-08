@@ -27,3 +27,4 @@ next-env.d.ts
 
 # pastas de textos em desenvolvimento
 .ignore
+/politicas
