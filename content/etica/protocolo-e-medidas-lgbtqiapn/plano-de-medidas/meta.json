@@ -1,0 +1,12 @@
+{
+  "title": "Plano de medidas",
+  "defaultOpen": false,
+  "icon": "Target",
+  "pages": [
+    "declaracao-de-principios",
+    "ambito-de-aplicacao",
+    "vigencia",
+    "medidas-planejadas",
+    "acompanhamento"
+  ]
+}
