@@ -1,0 +1,70 @@
+---
+title: "6. Macroprocesso SG4 - Tecnologia da Informação"
+description: "Mapa de processos e as quatro frentes do macroprocesso SG4."
+---
+
+O macroprocesso SG4 organiza as atividades de TI em quatro frentes: suporte e atendimento, infraestrutura e recursos tecnológicos, sistemas/acessos/segurança da informação e soluções digitais/continuidade/melhoria. O processo deve transformar demandas, incidentes, necessidades de equipamentos, acessos, sistemas e riscos tecnológicos em usuários atendidos, recursos disponíveis, sistemas funcionando, acessos seguros, dados protegidos e soluções implantadas.
+
+<Mermaid
+  title="Mapa de processos de Tecnologia da Informação: entradas, macroprocessos SG4.1 a SG4.3, saídas e o processo transversal SG4.4"
+  chart={`%%{init: {"flowchart": {"wrappingWidth": 280, "nodeSpacing": 24, "rankSpacing": 70, "padding": 14}}}%%
+flowchart TB
+  subgraph TOP[" "]
+    direction LR
+    subgraph E["ENTRADAS"]
+      direction TB
+      E1["Chamados e solicitações dos usuários"]
+      E2["Incidentes e falhas tecnológicas"]
+      E3["Necessidades de equipamentos e acessos"]
+      E4["Demandas de sistemas e automações"]
+      E5["Riscos tecnológicos e necessidade de backup"]
+      E1 ~~~ E2 ~~~ E3 ~~~ E4 ~~~ E5
+    end
+    subgraph P[" "]
+      direction TB
+      P1["<b>SG4.1 SUPORTE E ATENDIMENTO DE TI</b><br/>• Chamados<br/>• Incidentes<br/>• Suporte ao usuário"]
+      P2["<b>SG4.2 INFRAESTRUTURA E RECURSOS TECNOLÓGICOS</b><br/>• Equipamentos<br/>• Rede<br/>• Internet<br/>• Telefonia"]
+      P3["<b>SG4.3 SISTEMAS, ACESSOS E SEGURANÇA DA INFORMAÇÃO</b><br/>• Sistemas corporativos<br/>• Acessos<br/>• Dados"]
+      P1 ~~~ P2 ~~~ P3
+    end
+    subgraph S["SAÍDAS"]
+      direction TB
+      S1["Usuários atendidos"]
+      S2["Recursos tecnológicos disponíveis"]
+      S3["Sistemas funcionando e acessos seguros"]
+      S4["Dados protegidos e soluções implantadas"]
+      S1 ~~~ S2 ~~~ S3 ~~~ S4
+    end
+    E --> P --> S
+  end
+  subgraph B["<b>SG4.4 SOLUÇÕES DIGITAIS, CONTINUIDADE E MELHORIA</b><br/>Processo transversal de apoio, proteção e evolução tecnológica"]
+    direction LR
+    KPI["<b>KPI</b><br/>Desenvolver melhorias digitais, proteger dados críticos e assegurar continuidade tecnológica para a operação."]
+    DA["<b>DA</b><br/>Dashboards e automações"]
+    BC["<b>BC</b><br/>Backup e restauração"]
+    CR["<b>CR</b><br/>Continuidade e riscos"]
+    MC["<b>MC</b><br/>Melhoria tecnológica"]
+    KPI --> DA ~~~ BC ~~~ CR ~~~ MC
+  end
+  TOP ~~~ B
+  classDef ent fill:#eaf1fb,stroke:#0b3d91,color:#0b2a5c
+  classDef mac fill:#0b3d91,stroke:#0b3d91,color:#ffffff
+  classDef sai fill:#e8f5e9,stroke:#2e7d32,color:#14391a
+  classDef sol fill:#eaf1fb,stroke:#0b3d91,color:#0b2a5c
+  class E1,E2,E3,E4,E5 ent
+  class P1,P2,P3 mac
+  class S1,S2,S3,S4 sai
+  class KPI,DA,BC,CR,MC sol
+  style TOP fill:none,stroke:none
+  style P fill:none,stroke:none
+  style E fill:none,stroke:#0b3d91,stroke-width:2px
+  style S fill:none,stroke:#2e7d32,stroke-width:2px
+  style B fill:none,stroke:#0b3d91,stroke-width:2px`}
+/>
+
+| Macroprocesso | Abrangência | Objetivo |
+| --- | --- | --- |
+| SG4.1 Suporte e Atendimento de TI | Chamados, incidentes e suporte ao usuário. | Atender usuários, resolver falhas e manter a continuidade das atividades. |
+| SG4.2 Infraestrutura e Recursos Tecnológicos | Equipamentos, rede, internet, telefonia e recursos tecnológicos. | Disponibilizar, manter e controlar recursos tecnológicos necessários à operação. |
+| SG4.3 Sistemas, Acessos e Segurança da Informação | Sistemas corporativos, acessos, perfis, dados e proteção das informações. | Garantir sistemas funcionando, acessos controlados e informações protegidas. |
+| SG4.4 Soluções Digitais, Continuidade e Melhoria | Dashboards, automações, backup, restauração, continuidade, riscos e melhorias. | Desenvolver melhorias digitais, proteger dados críticos e assegurar continuidade tecnológica. |

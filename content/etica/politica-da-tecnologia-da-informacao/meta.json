@@ -1,0 +1,26 @@
+{
+  "title": "Política da Tecnologia da Informação",
+  "defaultOpen": false,
+  "icon": "Cpu",
+  "pages": [
+    "objetivo",
+    "aplicacao",
+    "documentos-de-referencia",
+    "conceitos-e-definicoes",
+    "principios-da-gestao-de-ti",
+    "macroprocesso-sg4",
+    "diretrizes-gerais-de-ti",
+    "descricao-dos-macroprocessos",
+    "fluxo-operacional-de-atendimento",
+    "responsabilidades",
+    "seguranca-da-informacao-e-uso-adequado",
+    "gestao-de-acessos",
+    "continuidade-backup-e-mudancas",
+    "registros-obrigatorios",
+    "indicadores-de-desempenho",
+    "riscos-e-controles",
+    "gestao-de-vulnerabilidades",
+    "monitoramento-e-melhoria-continua",
+    "disposicoes-finais"
+  ]
+}
